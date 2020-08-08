@@ -1,6 +1,6 @@
 module testbench();
 
-	reg p1, p2, p3;
+	reg p1, p2, p3, p4, p5, p6;
 	wire led1, led2;
 	
 	gateLevel   G1(p1, p2, p3, led1);
@@ -20,13 +20,14 @@ module testbench();
 		#1 p1=1; p2=1; p3=1; 
 		
 	end 
-
+	
 	initial
 		#20 $finish;
 		
 	initial begin
-		$dumpfile("tabla1e1_tb.vcd");
+		$dumpfile("tabla1e2_tb.vcd");
 		$dumpvars(0, testbench);
 		end
-		
+
+
 endmodule
